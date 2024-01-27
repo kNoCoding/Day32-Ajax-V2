@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+}
+button {
+
+}
+
+
+.ans {
+    background-color: lightcyan;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.ans h2 {
+    text-transform: capitalize;
+}
+
+.ans img {
+    max-width: 90%;
+}
