@@ -30,6 +30,8 @@ function renderContacts(contacts) {
         strHtml += `
                 <div class="single-contact">
                 <p> ${contact.lname}, ${contact.fname} </p>
+                <img src="https://robohash.org/${contact.fname}?set=set5" alt="Image of ${contact.fname}">
+
                 <table>
                     <tr>
                         <td>Phone: </td>
