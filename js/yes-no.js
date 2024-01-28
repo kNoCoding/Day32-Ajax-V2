@@ -1,4 +1,5 @@
 
+const debounceGetAns = debounce(() => getAns(renderAns), 3000)
 
 function onAsk(ev) {
     // check the input without RegEx
@@ -12,7 +13,7 @@ function onAsk(ev) {
     let regex = /^.{3,}\?$/
 
     if (regex.test(value)) {
-        getAns(renderAns)
+        debounceGetAns()
     } else {
         hideAns()
     }
