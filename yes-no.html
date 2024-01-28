@@ -8,10 +8,21 @@
     <link rel="stylesheet" href="css/yes-no.css">
 </head>
 
-<body onload="onInit()">
+<body>
 
-    <section class="container"></section>
+    <section class="container">
+        <h1>Ask anything</h1>
+        <h3>Yes/No</h3>
+        <input oninput="onAsk(event)" type="text" name="question" id="question" placeholder="Your Question">
+    </section>
+    
+    <section class="ans" hidden>
+        <h2></h2>
+        <img onload="showAns()" src="" alt="">
+    </section>
 
+    <script src="lib/jquery.js"></script>
+    <script src="js/services/yes-no-jquery.service.js"></script>
     <script src="js/yes-no.js"></script>
 </body>
 
