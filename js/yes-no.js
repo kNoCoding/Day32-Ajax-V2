@@ -1,17 +1,42 @@
 
 
 function onAsk(ev) {
-    console.log('ev', ev)
+    let lastChar = ev.target.value.slice(-1)
 
-    console.log('ev.target.value', ev.target.value)
-    getAns(renderAns)
+    if (ev.target.value.length > 3 && lastChar === '?') getAns(renderAns)
+    if (ev.target.value.length === 0) hideAns()
 }
 
 function renderAns(ans) {
     document.querySelector('.ans h2').innerText = ans.answer
     document.querySelector('.ans img').src = ans.image
+
+    if (ans.answer === 'yes') getJoke(renderJoke)
+    if (ans.answer === 'no') getDog(renderDog)
+}
+
+function renderJoke(ans) {
+    document.querySelector('.ans p').innerText = ans.value
+}
+function renderDog(ans) {
+    document.querySelector('.ans p').innerText = ''
+    document.querySelector('.ans img').src = ans.message
 }
 
 function showAns() {
     document.querySelector('.ans').hidden = false
 }
+
+function hideAns() {
+    document.querySelector('.ans').hidden = true
+}
+
+
+
+// function renderJoke() {
+
+// }
+
+// function renderDog() {
+
+// }
