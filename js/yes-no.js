@@ -1,10 +1,21 @@
 
 
 function onAsk(ev) {
-    let lastChar = ev.target.value.slice(-1)
+    // check the input without RegEx
+    // let lastChar = ev.target.value.slice(-1)
 
-    if (ev.target.value.length > 3 && lastChar === '?') getAns(renderAns)
-    if (ev.target.value.length === 0) hideAns()
+    // if (ev.target.value.length > 3 && lastChar === '?') getAns(renderAns)
+    // if (ev.target.value.length === 0) hideAns()
+
+    // check the input using RegEx
+    let value = ev.target.value
+    let regex = /^.{3,}\?$/
+
+    if (regex.test(value)) {
+        getAns(renderAns)
+    } else {
+        hideAns()
+    }
 }
 
 function renderAns(ans) {
@@ -30,13 +41,3 @@ function showAns() {
 function hideAns() {
     document.querySelector('.ans').hidden = true
 }
-
-
-
-// function renderJoke() {
-
-// }
-
-// function renderDog() {
-
-// }

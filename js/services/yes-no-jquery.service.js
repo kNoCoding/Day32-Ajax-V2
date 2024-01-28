@@ -9,8 +9,6 @@ function getAns(callback) {
 function getJoke(callback) {
     $.get('https://api.chucknorris.io/jokes/random', (res) => {
         callback(res)
-        console.log('!!!!res: ', res)
-
     })
 }
 
