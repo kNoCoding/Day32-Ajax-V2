@@ -1,0 +1,33 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    p:first-of-type {
+        background-color: rgb(247, 205, 145);
+        margin: 0;
+        padding: .2em;
+        font-weight: bold;
+    }
+
+    .image-and-table-container {
+        background-color: lightblue;
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+
+        img {
+            width: 100%;
+            padding: .5em;
+        }
+
+        table {
+            padding: .5em;
+
+            tr td:nth-of-type(2) {
+                text-align: end;
+            }
+        }
+    }
+}
