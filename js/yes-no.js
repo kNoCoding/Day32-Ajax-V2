@@ -1,5 +1,5 @@
 
-const debounceGetAns = debounce(() => getAns(renderAns), 3000)
+const debounceGetAns = debounce(() => getAns(renderAns), 2000)
 
 function onAsk(ev) {
     // check the input without RegEx
